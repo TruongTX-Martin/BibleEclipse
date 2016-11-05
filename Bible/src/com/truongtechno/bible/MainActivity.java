@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import com.truongtechno.bible.base.manager.BaseManager;
+import com.truongtechno.bible.database.DatabaseHandler;
 import com.truongtechno.bible.menutop.fragment.MenuTopFragment;
 import com.truongtechno.bible.slidemenu.fragment.SlideMenuFragment;
 
@@ -22,6 +23,8 @@ public class MainActivity extends FragmentActivity {
         BaseManager.getIntance().setCurrentContext(
                 getApplicationContext());
         context = this;
+        DatabaseHandler databaseHandler = new DatabaseHandler(this);
+        BaseManager.getIntance().setDatabaseHandler(databaseHandler);
         try {
             setContentView(R.layout.core_main_activity);
         } catch (Exception e) {

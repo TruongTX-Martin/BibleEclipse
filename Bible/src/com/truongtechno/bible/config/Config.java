@@ -4,12 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import com.truongtechno.bible.MainActivity;
-import com.truongtechno.bible.entity.ItemBible;
-import com.truongtechno.bible.entity.ItemBible;
-
 import android.graphics.Color;
 import android.util.DisplayMetrics;
+
+import com.truongtechno.bible.MainActivity;
+import com.truongtechno.bible.entity.ItemBible;
 
 public class Config {
 

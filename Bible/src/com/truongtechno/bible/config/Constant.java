@@ -13,4 +13,11 @@ public class Constant {
 	public static final String SCREEN_HOME = "Home Screen";
 	public static final String ITEM_TANUOC = "Tân Ước";
 	public static final String ITEM_CUUUOC = "Cựu Ước";
+	
+	
+	//colum save database
+	public static final String COLUM_TANUOC = "tanuoc";
+	public static final String COLUM_CUUUOC = "cuuuoc";
+	public static final String TEXT_EMPTY = "";
+	
 }

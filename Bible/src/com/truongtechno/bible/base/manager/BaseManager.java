@@ -11,6 +11,7 @@ import android.support.v4.app.FragmentTransaction;
 import com.truongtechno.bible.R;
 import com.truongtechno.bible.base.fragment.BaseFragment;
 import com.truongtechno.bible.config.Constant;
+import com.truongtechno.bible.database.DatabaseHandler;
 import com.truongtechno.bible.menutop.controller.MenuTopController;
 import com.truongtechno.bible.slidemenu.controller.PhoneSlideMenuController;
 
@@ -22,6 +23,22 @@ public class BaseManager {
 	private Context mCurrentContext;
 	protected MenuTopController mMenuTopController;
 	private FragmentManager mManager;
+	private DatabaseHandler databaseHandler;
+	
+	public static BaseManager getIntance() {
+		if (null == instance) {
+			instance = new BaseManager();
+		}
+		return instance;
+	}
+	
+	public void setDatabaseHandler(DatabaseHandler databaseHandler) {
+		this.databaseHandler = databaseHandler;
+	}
+	
+	public DatabaseHandler getDatabaseHandler() {
+		return databaseHandler;
+	}
 
 	public Context getCurrentContext() {
 		return mCurrentContext;
@@ -55,12 +72,7 @@ public class BaseManager {
 		this.mManager = mManager;
 	}
 
-	public static BaseManager getIntance() {
-		if (null == instance) {
-			instance = new BaseManager();
-		}
-		return instance;
-	}
+	
 
 	public void setSlideMenuController(PhoneSlideMenuController controller) {
 		mSlideMenuController = controller;

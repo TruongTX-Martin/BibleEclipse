@@ -11,18 +11,12 @@
         android:layout_height="match_parent"
         android:orientation="vertical" >
 
-        <com.truongtechno.bible.style.PagerSlidingTabStrip
-            android:id="@+id/pager_title_strip"
-            android:layout_width="match_parent"
-            android:layout_height="40dip"
-            android:layout_gravity="bottom"
-            app:pstsTabPaddingLeftRight="35dp" />
-
-        <android.support.v4.view.ViewPager
-            android:id="@+id/pager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal" />
+       	<Button
+       	    android:id="@+id/btnImport"
+       	    android:layout_width="wrap_content"
+       	    android:layout_height="wrap_content"
+       	    android:text="Import"
+       	    />
     </LinearLayout>
 
 </RelativeLayout>
